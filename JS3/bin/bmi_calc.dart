@@ -15,7 +15,6 @@ kategori = "Gemuk";
 kategori = "Obesitas";
 }
 
-
 return {
 'tinggi': tinggiCm,
 'berat': beratKg,
