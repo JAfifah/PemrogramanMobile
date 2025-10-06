@@ -10,3 +10,5 @@ Text(
   style: TextStyle(color: Colors.red, fontSize: 14),
   textAlign: TextAlign.center,
 );
+
+![Hasil Text Widget](screenshots/text_widget_result.png)
