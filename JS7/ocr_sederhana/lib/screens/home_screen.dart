@@ -1,3 +1,4 @@
+// lib/screens/home_screen.dart   afifah14
 import 'package:flutter/material.dart';
 import 'scan_screen.dart';
 
@@ -8,20 +9,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Beranda OCR')),
-      body: Center(
-        child: ElevatedButton.icon(
-          icon: const Icon(Icons.camera_alt),
-          label: const Text('Mulai Scan Teks'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ScanScreen()),
-            );
-          },
-          style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        children: [
+          Card(
+            margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            child: ListTile(
+              leading: const Icon(Icons.camera_alt, color: Colors.blue),
+              title: const Text('Mulai Pindai Teks Baru'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ScanScreen()),
+                );
+              },
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
